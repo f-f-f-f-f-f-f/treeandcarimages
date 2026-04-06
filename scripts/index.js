@@ -19,5 +19,10 @@ for (const el of games) {
         win.document.body.appendChild(iframe);
     });
 }
+window.addEventListener("beforeunload", (e) => {
+    const msg = `Are you sure you want to leave?`;
+    e.returnValue = msg;
+    return msg;
+});
 export {};
 //# sourceMappingURL=index.js.map
