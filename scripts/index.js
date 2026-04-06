@@ -2,6 +2,8 @@ const games = document
     .querySelector("#special")
     .querySelectorAll("a");
 for (const el of games) {
+    if (!el.href.includes("asyncem"))
+        continue;
     const link = el.href;
     el.href = "about:blank"; // To give it styling
     el.removeAttribute("target");
