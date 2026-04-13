@@ -10,7 +10,10 @@ https://treeandcarimages.vercel.app
 
 https://gleaming-macaron-415e7d.netlify.app/
 
-(Note: I recommend the GitHub Pages link as it is the least likely to be blocked)
+(Note: I recommend the GitHub Pages link as it is the least likely to be blocked).
+
+Suggestions [go here](https://forms.gle/bTotJqGZ6d9tq8SUA).
+Priority will be given to those at my school.
 
 Credits:
 

@@ -3182,9 +3182,9 @@ Please report this to https://github.com/markedjs/marked.`, e) {
   var STATIC_DATA = {
     changelog: {
       version: {
-        string: "1.1.0"
+        string: "1.2.0"
       },
-      updates: [`Added changelog`].map((str) => `${g(str.replace(/\n/g, "<br>"))}`).join("")
+      updates: [`Added suggestions form`].map((str) => `${g(str.replace(/\n/g, "<br>"))}`).join("")
     }
   };
   {
