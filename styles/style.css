@@ -5,3 +5,26 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+dialog {
+  background-color: gray;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  align-content: center;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#changelog {
+  box-shadow: 0 0 20px 5px rgb(0, 82, 205);
+}
+
+.lfs-warning-dialog {
+  font-size: 1.25rem;
+}
