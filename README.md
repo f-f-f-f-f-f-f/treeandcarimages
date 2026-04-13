@@ -4,11 +4,13 @@ Unblocked games.
 
 Access at one of these links:
 
-https://treeandcarimages.vercel.app
-
 https://f-f-f-f-f-f-f.github.io/treeandcarimages/
 
+https://treeandcarimages.vercel.app
+
 https://gleaming-macaron-415e7d.netlify.app/
+
+(Note: I recommend the GitHub Pages link as it is the least likely to be blocked)
 
 Credits:
 
