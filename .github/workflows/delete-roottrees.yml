@@ -1,0 +1,25 @@
+name: Scheduled Folder Deletion
+on:
+  schedule:
+    - cron: "0 0 18 5 *"
+  workflow_dispatch:
+
+jobs:
+  delete-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Remove folder and push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -d "therealdeal/roottrees" ]; then
+            git rm -r therealdeal/roottrees
+            git commit -m "Removed Roottrees, for real this time" || echo "Nothing to commit"
+            git push
+          else
+            echo "Folder not found, skipping."
+          fi
