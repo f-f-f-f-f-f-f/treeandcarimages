@@ -7003,6 +7003,49 @@ See the warning next to the game link for info.`,
     }
   }
   {
+    const modal = document.querySelector(
+      "#adobe-flash-warning"
+    );
+    if (navigator.plugins.namedItem("Shockwave Flash") instanceof Plugin && localStorage.getItem("adobe-flash-nowarn") !== "true") {
+      modal.showModal();
+    }
+    const btn = modal.querySelector(
+      ".adobe-flash-warning-nowarn"
+    );
+    btn.addEventListener("click", () => {
+      modal.close();
+      localStorage.setItem("adobe-flash-nowarn", "true");
+    });
+    {
+      const span = document.querySelector(
+        ".adobe-flash-warning-discontinuation-date"
+      );
+      const death = Un.PlainDateTime.from({
+        year: 2020,
+        month: 12,
+        day: 31,
+        hour: 23,
+        minute: 59,
+        second: 59
+      });
+      const handler = () => {
+        const time = Un.Now.plainDateTimeISO();
+        const elapsed = time.since(death, { largestUnit: "year" });
+        span.textContent = `
+${elapsed.years} years,
+${elapsed.months} months,
+${elapsed.days} days,
+${elapsed.hours} hours,
+${elapsed.minutes} minutes,
+and
+${elapsed.seconds} seconds
+`;
+      };
+      handler();
+      setInterval(handler, 1e3);
+    }
+  }
+  {
     const link = document.querySelector(
       "a[href*='roottrees/Roottrees_WebGL_MinorPatch/']"
     );
